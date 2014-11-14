@@ -13,7 +13,6 @@ Watchlist Sniper was created as a means to beat the rush to sign up for Penn Sta
 
 <h2>Future Updates</h2>
 <ul>
-<li>Add password encryption for secure local storage</li>
 <li>Add IMAP support to automatically launch the script when a Watchlist email is sent</li>
 <li>Package Ruby and gem dependencies for use on Windows, Mac, and Linux systems</li>
 </ul>
