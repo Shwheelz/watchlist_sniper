@@ -11,6 +11,7 @@ $browser.text_field(id: 'login').set($username)
 $browser.text_field(id: 'password').set($password)
 $browser.button(value: 'Log In').click
 
+
 begin # Select the Menu if the browser window isn't fullscreen
 	$browser.div(class: 'container').link(class: 'btn btn-navbar dark addMarginsAll').click
 rescue

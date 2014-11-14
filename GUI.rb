@@ -1,13 +1,17 @@
 require 'green_shoes'
 require 'pstore'
+require 'encrypted_strings'
 
 store = PStore.new("data.pstore")		
 
 $username = store.transaction { store.fetch(:username, "abc1234") }
-$password = store.transaction { store.fetch(:password, "") }
+encrypted_password = store.transaction { store.fetch(:password, "") }
+if encrypted_password != ""
+	$password = encrypted_password.decrypt(:symmetric, :algorithm => 'des-ecb', :password => 'asymmetric') 
+end
 $course_number = store.transaction { store.fetch(:course_number, "123456") }
 
-Shoes.app title: "PSU Watchlist Script", height: 200 do
+Shoes.app title: "PSU Watchlist Script", height: 275 do
 
 	para 'Username: '
 	@username_field = edit_line text: $username do
@@ -32,10 +36,11 @@ Shoes.app title: "PSU Watchlist Script", height: 200 do
 		if @remember_me.checked?
 			store.transaction do
 				store[:username] = $username				
-				store[:password] = $password
+				store[:password] = $password.encrypt(:symmetric, :algorithm => 'des-ecb', :password => 'asymmetric')
 				store[:course_number] = $course_number
 			end
 		end
 		load 'WatchlistSniper.rb'
 	end
 end
+
