@@ -42,5 +42,6 @@ Shoes.app title: "PSU Watchlist Script", height: 275 do
 		end
 		load 'WatchlistSniper.rb'
 	end
+	@start.focus
 end
 
