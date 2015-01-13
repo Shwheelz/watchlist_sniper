@@ -21,11 +21,11 @@ end
 $browser.link(id: 'ScheduleCategoryDiv').click
 $browser.link(id: 'allListForm:cats:8:functions:7:j_idt45').click
 
-# select the Fall semester
-# $browser.iframe(id: 'iframe').table(id: 'vwtable').radio(id: 'radio1@1').set
+# select the first semester 
+$browser.iframe(id: 'iframe').table(id: 'vwtable').radio(id: 'radio1@1').set
 
-# select the Spring semester
-$browser.iframe(id: 'iframe').table(id: 'vwtable').radio(id: 'radio1@2').set
+# select the another semester by changing the second number in 'radio1@1'
+# $browser.iframe(id: 'iframe').table(id: 'vwtable').radio(id: 'radio1@2').set
 $browser.iframe(id: 'iframe').button(value: 'Continue').click
 
 # re-enter password
