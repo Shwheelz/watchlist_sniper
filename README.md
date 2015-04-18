@@ -6,6 +6,7 @@ Watchlist Sniper was created as a means to beat the rush to sign up for Penn Sta
 Prerequisites:
 <ul>
 <li>Ruby 1.9.3 or higher</li>
+<li>The appropriate Ruby DevKit may need installed on Windows</li>
 <li>Google Chrome</li>
 </ul>
 
