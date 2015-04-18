@@ -11,6 +11,7 @@ Prerequisites:
 </ul>
 
 How to Run:
+
 To install the gems necessary to run this script, run
 ```bundle install```
 
