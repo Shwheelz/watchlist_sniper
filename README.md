@@ -1,6 +1,8 @@
 Watchlist Sniper
 ================
 
+Please note, this script is no longer maintained.  I graduated in May 2015 and no longer have access to eLion.
+
 Watchlist Sniper was created as a means to beat the rush to sign up for Penn State Watchlist courses.  Simply add basic information to go into eLion, then wait to receive the text and hit submit.  Watchlist Sniper will take care of the rest!  Please follow the instructions below for best results.
 
 Prerequisites:
